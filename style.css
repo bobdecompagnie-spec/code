@@ -1,0 +1,176 @@
+/* Importation d'une police Google Fonts (facultatif) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    /* Définition des variables de couleurs pour un thème sombre */
+    --primary-color: #007bff; /* Bleu éclatant */
+    --background-color: #1a1a2e; /* Fond très sombre (bleu-nuit) */
+    --text-color: #f0f0f0; /* Texte clair */
+    --card-bg-color: #2c2c47; /* Fond des sections */
+    --nav-bg-color: #16162a; /* Fond de la navigation */
+    --warning-color: #ffc107; /* Jaune d'avertissement */
+}
+
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, var(--background-color), #0f0f1a);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.8;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--nav-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Contenu principal */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    color: var(--text-color);
+    margin-top: 25px;
+}
+
+/* Listes */
+ul {
+    padding-left: 25px;
+    list-style-type: '👉 ';
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Glossaire (Definition List) */
+dl dt {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 15px;
+}
+
+dl dd {
+    margin-left: 0;
+    padding-left: 15px;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Avertissement */
+.warning {
+    padding: 15px;
+    background-color: #4b3d17; /* Fond sombre pour le jaune d'alerte */
+    color: var(--warning-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: 1px solid var(--warning-color);
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--nav-bg-color);
+    color: var(--text-color);
+    margin-top: 30px;
+}
+
+/* Média queries pour la responsivité */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+body {
+    /* 1. Assure que le corps de la page utilise toute la hauteur de la fenêtre */
+    min-height: 100vh;
+    
+    /* 2. Active Flexbox */
+    display: flex;
+    
+    /* 3. Centre les éléments enfants horizontalement */
+    justify-content: center;
+    
+    /* 4. Centre les éléments enfants verticalement */
+    align-items: center;
+    
+    /* 5. (Optionnel) Ajout si vous avez plusieurs éléments qui ne sont pas censés s'aligner sur une seule ligne */
+    flex-direction: column;
+    
+    /* Pour le texte à l'intérieur des éléments enfants, s'assurer qu'il est centré horizontalement */
+    text-align: center;
+}
